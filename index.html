@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="UTF-8">
+	<title>Vaegher Patch Price Figuring</title>
+	<link rel="stylesheet" href="style.css"> </link>
+</head>
+	<body>
+		<div>
+			<label for="tax-percent">Tax %</label>
+			<input type="range" id="tax-percent" min="0" max="50" step="5">
+			<p id="tax-value">25</p>
+		</div>
+		<div>
+			<label for="standard-cost">Standard cost $</label>
+			<input type="range" id="standard-cost" min="1" max="5" step="1">
+			<p id="standard-cost-value">3</p>
+		</div>
+		<div>
+			<label for="standard-price">Standard price $</label>
+			<input type="range" id="standard-price" min="10" max="30" step="1">
+			<p id="standard-price-value">20</p>
+		</div>
+		<div>
+			<label for="custom-cost">Custom cost $</label>
+			<input type="range" id="custom-cost" min="1" max="5" step="1">
+			<p id="custom-cost-value">3</p>
+		</div>
+		<div>
+			<label for="custom-price">Custom price $</label>
+			<input type="range" id="custom-price" min="10" max="30" step="1">
+			<p id="custom-price-value">20</p>
+		</div>
+		
+	</body>
+	<script src="app.js" charset="UTF-8"></script>
+</html>
