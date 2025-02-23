@@ -7,6 +7,11 @@
 </head>
 	<body>
 		<div>
+			<label for="year-profit">Yearly Take Home After Taxes (in thousands)</label>
+			<input type="range" id="year-profit" min="40000" max="100000" step="5000">
+			<p id="profit-value">70000</p>
+		</div>
+		<div>
 			<label for="tax-percent">Tax %</label>
 			<input type="range" id="tax-percent" min="0" max="50" step="5">
 			<p id="tax-value">25</p>
@@ -31,7 +36,19 @@
 			<input type="range" id="custom-price" min="10" max="30" step="1">
 			<p id="custom-price-value">20 </p>
 		</div>
-		
+		<h3>Iterations:</h3>
+		<label for="standard-only">Standard Only</label>
+		<input type="checkbox" id="standard-only"><br>
+		<label for="custom-only">Custom Only</label>
+		<input type="checkbox" id="custom-only"><br>
+		<label for="fifty-fifty">50/50</label>
+		<input type="checkbox" id="fifty-fifty"><br>
+		<label for="s70-c30">70% Standard - 30% Custom</label>
+		<input type="checkbox" id="s70-c30"><br>
+		<label for="s30-c70">30% Standard - 70% Custom</label>
+		<input type="checkbox" id="s30-c70"><br>
+		<button>Add Iteration</button> <br><br>
+		<button>Run it</button>
 	</body>
 	<script src="app.js" charset="UTF-8"></script>
 </html>

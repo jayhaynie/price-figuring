@@ -1,5 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
 	
+const profitSlider = document.getElementById("year-profit");
+const profitValue = document.getElementById("profit-value");
+
+profitSlider.addEventListener("input", function() {
+    profitValue.textContent = profitSlider.value;
+});
+
 const taxSlider = document.getElementById("tax-percent");
 const taxValue = document.getElementById("tax-value");
 
@@ -34,5 +41,17 @@ const customPriceValue = document.getElementById("custom-price-value");
 customPriceSlider.addEventListener("input", function() {
     customPriceValue.textContent = customPriceSlider.value;
 });
+
+
+const standardOnlySelected = document.getElementById("standard-only");
+const customOnlySelected = document.getElementById("custom-only");
+const fiftyFiftySelected = document.getElementById("fifty-fifty");
+const s70c30Selected = document.getElementById("s70-c30");
+const s30c70Selected = document.getElementById("s30-c70");
+standardOnlySelected = 0;
+customOnlySelected = 0;
+fiftyFiftySelected = 0;
+s70c30Selected = 0;
+s30c70Selected = 0;
 
 })
