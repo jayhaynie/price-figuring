@@ -113,37 +113,54 @@ let s70c30CAmount = 0;
 let s30c70SAmount = 0;
 let s30c70CAmount = 0;
 
+const bTIValue = document.getElementById("bTI-value");
+const sUPMValue = document.getElementById("sUPM-value");
+const cUPMValue = document.getElementById("cUPM-value");
+const sOUAValue = document.getElementById("sOUA-value");
+const cOUAValue = document.getElementById("cOUA-value");
+const sFFScFFSValue = document.getElementById("sFFScFFS-value");
+const s70c30SCValue = document.getElementById("s70c30SC-value");
+const s30c70SCValue = document.getElementById("s30c70SC-value");
+
 runItButton.addEventListener('click', function() {
     beforeTaxIncome = Math.round((profitSlider.value / ((100 - taxSlider.value) / 100)) * 1) / 1 + 1;
     console.log("Total income before tax is $" + beforeTaxIncome);
+    bTIValue.innerText = "$" + beforeTaxIncome;
 
     standardProfit = standardPriceSlider.value - standardCostSlider.value;
     //console.log("Standard Unit Profit Margin is " + standardProfit);
+    sUPMValue.innerText = "$" + standardProfit;
 
     customProfit = customPriceSlider.value - customCostSlider.value;
     //console.log("custom Unit Profit Margin is " + customProfit);
+    cUPMValue.innerText = "$" + customProfit;
 
     if (standardOnlyCheck === 1) {
         sOnlyAmount = Math.round(beforeTaxIncome / standardProfit * 1) / 1 + 1; 
-        console.log("Only-standard units required is " + sOnlyAmount);
+        //console.log("Only-standard units required is " + sOnlyAmount);
+        sOUAValue.innerText = sOnlyAmount;
     };
     if (customOnlyCheck === 1) {
         cOnlyAmount = Math.round(beforeTaxIncome / customProfit * 1) / 1 + 1; 
-        console.log("Only-custom units required is " + cOnlyAmount);
+        //console.log("Only-custom units required is " + cOnlyAmount);
+        cOUAValue.innerText = cOnlyAmount;
     };
     if (fiftyFiftyCheck === 1) {
         fiftyFiftySAmount = Math.round((beforeTaxIncome / 2) / standardProfit *1) /1 + 1;
         fiftyFiftyCAmount = Math.round((beforeTaxIncome / 2) / customProfit *1) /1 + 1;
-        console.log("50/50 split is " + fiftyFiftySAmount + " standard units and " + fiftyFiftyCAmount + " custom units");
+        //console.log("50/50 split is " + fiftyFiftySAmount + " standard units and " + fiftyFiftyCAmount + " custom units");
+        sFFScFFSValue.innerText = fiftyFiftySAmount + " / " + fiftyFiftyCAmount;
     };
     if (s70c30Check === 1) {
         s70c30SAmount = Math.round((beforeTaxIncome * 0.7) / standardProfit *1) / 1 +1;
         s70c30CAmount = Math.round((beforeTaxIncome * 0.3) / standardProfit *1) / 1 +1;
-        console.log("70/30 standard/custom split requires " + s70c30SAmount + " standard units and " + s70c30CAmount + " custom units");
+        //console.log("70/30 standard/custom split requires " + s70c30SAmount + " standard units and " + s70c30CAmount + " custom units");
+        s70c30SCValue.innerText = s70c30SAmount + " / " + s70c30CAmount;
     };
     if (s30c70Check === 1) {
         s30c70SAmount = Math.round((beforeTaxIncome * 0.7) / standardProfit *1) / 1 +1;
         s30c70CAmount = Math.round((beforeTaxIncome * 0.3) / standardProfit *1) / 1 +1;
-        console.log("30/70 standard/custom split requires " + s30c70SAmount + " standard units and " + s30c70CAmount + " custom units");
+        //console.log("30/70 standard/custom split requires " + s30c70SAmount + " standard units and " + s30c70CAmount + " custom units");
+        s30c70SCValue.innerText = s30c70SAmount + " / " + s30c70CAmount;
     };
 });

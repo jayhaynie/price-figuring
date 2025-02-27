@@ -1,0 +1,41 @@
+#bti-div {
+  position: absolute;
+  top: 0%;
+  left: 30%
+}
+#supm-div {
+  position: absolute;
+  top: 20%;
+  left: 30%
+}
+#cupm-div {
+  position: absolute;
+  top: 40%;
+  left: 30%
+}
+
+#soua-div {
+  position: absolute;
+  top: 0%;
+  left: 50%
+}
+#coua-div {
+  position: absolute;
+  top: 20%;
+  left: 50%
+}
+#fifty-div {
+  position: absolute;
+  top: 40%;
+  left: 50%
+}
+#split73-div {
+  position: absolute;
+  top: 60%;
+  left: 50%
+}
+#split37-div {
+  position: absolute;
+  top: 80%;
+  left: 50%
+}
