@@ -46,7 +46,40 @@
 		<label for="s70-c30">70% Standard - 30% Custom</label>
 		<input type="checkbox" id="s70-c30"><br>
 		<label for="s30-c70">30% Standard - 70% Custom</label>
-		<input type="checkbox" id="s30-c70"><br><br>
+		<input type="checkbox" id="s30-c70"><br>
+		<button id="add-iteration-button">Add Iteration</button><br><br>
+
+		<div id="iteration1-input-div">
+			<label for="iteration1-input">Iteration 1: Standard / Custom Ratio (%)</label>
+			<input type="range" id="iteration1-input" min="5" max="95" step="5">
+			<p id="iteration1-input-values">50 / 50</p>
+			<button id="remove-iteration1">Remove Iteration 1</button>
+		</div>
+		<div id="iteration2-input-div">
+			<label for="iteration2-input">Iteration 2: Standard / Custom Ratio (%)</label>
+			<input type="range" id="iteration2-input" min="5" max="95" step="5">
+			<p id="iteration2-input-values">50 / 50</p>
+			<button id="remove-iteration2">Remove Iteration 2</button>
+		</div>
+		<div id="iteration3-input-div">
+			<label for="iteration3-input">Iteration 3: Standard / Custom Ratio (%)</label>
+			<input type="range" id="iteration3-input" min="5" max="95" step="5">
+			<p id="iteration3-input-values">50 / 50</p>
+			<button id="remove-iteration3">Remove Iteration 3</button>
+		</div>
+		<div id="iteration4-input-div">
+			<label for="iteration4-input">Iteration 4: Standard / Custom Ratio (%)</label>
+			<input type="range" id="iteration4-input" min="5" max="95" step="5">
+			<p id="iteration4-input-values">50 / 50</p>
+			<button id="remove-iteration4">Remove Iteration 4</button>
+		</div>
+		<div id="iteration5-input-div">
+			<label for="iteration5-input">Iteration 5: Standard / Custom Ratio (%)</label>
+			<input type="range" id="iteration5-input" min="5" max="95" step="5">
+			<p id="iteration5-input-values">50 / 50</p>
+			<button id="remove-iteration5">Remove Iteration 5</button>
+		</div>
+
 		<button id="run-it-button">Run It</button><br><br>
 		<div id="bti-div">
 			<h4>Before Tax Income:</h4>
@@ -80,10 +113,28 @@
 			<h4>30/70 Standard/Custom Split:</h4>
 			<p id="s30c70SC-value">-</p>
 		</div>
-		<div id="">
-			<h4></h4>
-			<p></p>
+	
+		<div id="iteration1-div">
+			<h4 id="iteration1-title"></h4>
+			<p id="iteration1-value"></p>
 		</div>
+		<div id="iteration2-div">
+			<h4 id="iteration2-title"></h4>
+			<p id="iteration2-value"></p>
+		</div>
+		<div id="iteration3-div">
+			<h4 id="iteration3-title"></h4>
+			<p id="iteration3-value"></p>
+		</div>
+		<div id="iteration4-div">
+			<h4 id="iteration4-title"></h4>
+			<p id="iteration4-value"></p>
+		</div>
+		<div id="iteration5-div">
+			<h4 id="iteration5-title"></h4>
+			<p id="iteration5-value"></p>
+		</div>
+		
 	</body>
 	<script src="app.js" charset="UTF-8"></script>
 </html>

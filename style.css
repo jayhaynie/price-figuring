@@ -1,41 +1,135 @@
 #bti-div {
   position: absolute;
   top: 0%;
-  left: 30%
+  left: 30%;
 }
 #supm-div {
   position: absolute;
   top: 20%;
-  left: 30%
+  left: 30%;
 }
 #cupm-div {
   position: absolute;
   top: 40%;
-  left: 30%
+  left: 30%;
 }
 
 #soua-div {
   position: absolute;
+  display: none;
   top: 0%;
-  left: 50%
+  left: 50%;
 }
 #coua-div {
   position: absolute;
+  display: none;
   top: 20%;
-  left: 50%
+  left: 50%;
 }
 #fifty-div {
   position: absolute;
+  display: none;
   top: 40%;
-  left: 50%
+  left: 50%;
 }
 #split73-div {
   position: absolute;
+  display: none;
   top: 60%;
-  left: 50%
+  left: 50%;
 }
 #split37-div {
   position: absolute;
+  display: none;
   top: 80%;
-  left: 50%
+  left: 50%;
+}
+
+#run-it-button {
+  position: absolute;
+  top: 61%;
+  left: 15%;
+}
+
+#iteration1-input-div {
+  position: absolute;
+  display: none;
+  top: 64%;
+}
+#iteration2-input-div {
+  position: absolute;
+  display: none;
+  top: 71%;
+}
+#iteration3-input-div {
+  position: absolute;
+  display: none;
+  top: 78%;
+}
+#iteration4-input-div {
+  position: absolute;
+  display: none;
+  top: 85%;
+}
+#iteration5-input-div {
+  position: absolute;
+  display: none;
+  top: 92%;
+}
+
+#remove-iteration1 {
+  position: absolute;
+  top: 40%;
+  right: 0%;
+}
+#remove-iteration2 {
+  position: absolute;
+  top: 40%;
+  right: 0%;
+}
+#remove-iteration3 {
+  position: absolute;
+  top: 40%;
+  right: 0%;
+}
+#remove-iteration4 {
+  position: absolute;
+  top: 40%;
+  right: 0%;
+}
+#remove-iteration5 {
+  position: absolute;
+  top: 40%;
+  right: 0%;
+}
+
+#iteration1-div {
+  position: absolute;
+  display: none;
+  top: 0%;
+  left: 70%;
+}
+#iteration2-div {
+  position: absolute;
+  display: none;
+  top: 20%;
+  left: 70%;
+}
+#iteration3-div {
+  position: absolute;
+  display: none;
+  top: 40%;
+  left: 70%;
+}
+#iteration4-div {
+  position: absolute;
+  display: none;
+  top: 60%;
+  left: 70%;
+}
+#iteration5-div {
+  position: absolute;
+  display: none;
+  top: 80%;
+  left: 70%;
 }
