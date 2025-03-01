@@ -97,7 +97,7 @@ s30c70.addEventListener('click', function() {
     };
     //console.log("s30c70 value is " + s30c70Check);
 });
-// Math.round(*1) / 1 +1;
+// Math.round( * 1) / 1 +1;
 
 
 const runItButton = document.getElementById("run-it-button");
@@ -158,10 +158,24 @@ fiftyDiv = document.getElementById("fifty-div");
 split73Div = document.getElementById("split73-div");
 split37Div = document.getElementById("split37-div");
 
+const bTIMonth = document.getElementById("bTI-month");
+const sOUAMonth = document.getElementById("sOUA-month");
+const cOUAMonth = document.getElementById("cOUA-month");
+const sFFScFFSMonth = document.getElementById("sFFScFFS-month");
+const s70c30SCMonth = document.getElementById("s70c30SC-month");
+const s30c70SCMonth = document.getElementById("s30c70SC-month");
+
+const iteration1Month = document.getElementById("iteration1-month");
+const iteration2Month = document.getElementById("iteration2-month");
+const iteration3Month = document.getElementById("iteration3-month");
+const iteration4Month = document.getElementById("iteration4-month");
+const iteration5Month = document.getElementById("iteration5-month");
+
 runItButton.addEventListener('click', function() {
     beforeTaxIncome = Math.round((profitSlider.value / ((100 - taxSlider.value) / 100)) * 1) / 1 + 1;
     console.log("Total income before tax is $" + beforeTaxIncome);
-    bTIValue.innerText = "$" + beforeTaxIncome;
+    bTIValue.innerText = "$" + beforeTaxIncome + "/year";
+    bTIMonth.innerText = "$" + (Math.round((beforeTaxIncome / 12) * 1) / 1 + 1) + "/month";
 
     standardProfit = standardPriceSlider.value - standardCostSlider.value;
     //console.log("Standard Unit Profit Margin is " + standardProfit);
@@ -176,14 +190,16 @@ runItButton.addEventListener('click', function() {
 
         sOnlyAmount = Math.round(beforeTaxIncome / standardProfit * 1) / 1 + 1; 
         //console.log("Only-standard units required is " + sOnlyAmount);
-        sOUAValue.innerText = sOnlyAmount;
+        sOUAValue.innerText = sOnlyAmount + "/year";
+        sOUAMonth.innerText = (Math.round((sOnlyAmount / 12) * 1) / 1 + 1) + "/month";
     };
     if (customOnlyCheck === 1) {
         cOUADiv.style.display = "block";
 
         cOnlyAmount = Math.round(beforeTaxIncome / customProfit * 1) / 1 + 1; 
         //console.log("Only-custom units required is " + cOnlyAmount);
-        cOUAValue.innerText = cOnlyAmount;
+        cOUAValue.innerText = cOnlyAmount + "/year";
+        cOUAMonth.innerText = (Math.round((cOnlyAmount / 12) * 1) / 1 +1) + "/month";
     };
     if (fiftyFiftyCheck === 1) {
         fiftyDiv.style.display = "block";
@@ -191,7 +207,8 @@ runItButton.addEventListener('click', function() {
         fiftyFiftySAmount = Math.round((beforeTaxIncome / 2) / standardProfit *1) /1 + 1;
         fiftyFiftyCAmount = Math.round((beforeTaxIncome / 2) / customProfit *1) /1 + 1;
         //console.log("50/50 split is " + fiftyFiftySAmount + " standard units and " + fiftyFiftyCAmount + " custom units");
-        sFFScFFSValue.innerText = fiftyFiftySAmount + " / " + fiftyFiftyCAmount;
+        sFFScFFSValue.innerText = fiftyFiftySAmount + " / " + fiftyFiftyCAmount + "/year";
+        sFFScFFSMonth.innerText = (Math.round((fiftyFiftySAmount / 12) * 1) / 1 + 1) + " / " + (Math.round((fiftyFiftyCAmount / 12) * 1) / 1 + 1) + "/month";
     };
     if (s70c30Check === 1) {
         split73Div.style.display = "block";
@@ -199,7 +216,8 @@ runItButton.addEventListener('click', function() {
         s70c30SAmount = Math.round((beforeTaxIncome * 0.7) / standardProfit *1) / 1 +1;
         s70c30CAmount = Math.round((beforeTaxIncome * 0.3) / customProfit *1) / 1 +1;
         //console.log("70/30 standard/custom split requires " + s70c30SAmount + " standard units and " + s70c30CAmount + " custom units");
-        s70c30SCValue.innerText = s70c30SAmount + " / " + s70c30CAmount;
+        s70c30SCValue.innerText = s70c30SAmount + " / " + s70c30CAmount + "/year";
+        s70c30SCMonth.innerText = (Math.round((s70c30SAmount / 12) * 1) / 1 + 1) + " / " + (Math.round((s70c30CAmount / 12) * 1) / 1 + 1) + "/month";
     };
     if (s30c70Check === 1) {
         split37Div.style.display = "block";
@@ -207,7 +225,8 @@ runItButton.addEventListener('click', function() {
         s30c70SAmount = Math.round((beforeTaxIncome * 0.3) / standardProfit *1) / 1 +1;
         s30c70CAmount = Math.round((beforeTaxIncome * 0.7) / customProfit *1) / 1 +1;
         //console.log("30/70 standard/custom split requires " + s30c70SAmount + " standard units and " + s30c70CAmount + " custom units");
-        s30c70SCValue.innerText = s30c70SAmount + " / " + s30c70CAmount;
+        s30c70SCValue.innerText = s30c70SAmount + " / " + s30c70CAmount + "/year";
+        s30c70SCMonth.innerText = (Math.round((s30c70SAmount / 12) * 1) / 1 + 1) + " / " + (Math.round((s30c70CAmount / 12) * 1) / 1 + 1) + "/month";
     };
 
     if (iterationCount >= 1) {
@@ -217,7 +236,8 @@ runItButton.addEventListener('click', function() {
         iteration1SAmount = Math.round((beforeTaxIncome * (iteration1Slider.value / 100)) / standardProfit *1) / 1 +1;
         iteration1CAmount = Math.round((beforeTaxIncome * ((100 - iteration1Slider.value) / 100)) / customProfit *1) / 1 +1;
 
-        iteration1Output.innerText = iteration1SAmount + " / " + iteration1CAmount;
+        iteration1Output.innerText = iteration1SAmount + " / " + iteration1CAmount + "/year";
+        iteration1Month.innerText = (Math.round((iteration1SAmount / 12) * 1) / 1 + 1) + " / " + (Math.round((iteration1CAmount / 12) * 1) / 1 + 1) + "/month";
     };
     if (iterationCount >= 2) {
         iteration2OutputDiv.style.display = "block";
@@ -226,7 +246,8 @@ runItButton.addEventListener('click', function() {
         iteration2SAmount = Math.round((beforeTaxIncome * (iteration2Slider.value / 100)) / standardProfit *1) / 1 +1;
         iteration2CAmount = Math.round((beforeTaxIncome * ((100 - iteration2Slider.value) / 100)) / customProfit *1) / 1 +1;
 
-        iteration2Output.innerText = iteration2SAmount + " / " + iteration2CAmount;
+        iteration2Output.innerText = iteration2SAmount + " / " + iteration2CAmount + "/year";
+        iteration2Month.innerText = (Math.round((iteration2SAmount / 12) * 1) / 1 + 1) + " / " + (Math.round((iteration2CAmount / 12) * 1) / 1 + 1) + "/month";
     };
     if (iterationCount >= 3) {
         iteration3OutputDiv.style.display = "block";
@@ -235,7 +256,8 @@ runItButton.addEventListener('click', function() {
         iteration3SAmount = Math.round((beforeTaxIncome * (iteration3Slider.value / 100)) / standardProfit *1) / 1 +1;
         iteration3CAmount = Math.round((beforeTaxIncome * ((100 - iteration3Slider.value) / 100)) / customProfit *1) / 1 +1;
 
-        iteration3Output.innerText = iteration3SAmount + " / " + iteration3CAmount;
+        iteration3Output.innerText = iteration3SAmount + " / " + iteration3CAmount + "/year";
+        iteration3Month.innerText = (Math.round((iteration3SAmount / 12) * 1) / 1 + 1) + " / " + (Math.round((iteration3CAmount / 12) * 1) / 1 + 1) + "/month";
     };
     if (iterationCount >= 4) {
         iteration4OutputDiv.style.display = "block";
@@ -244,7 +266,8 @@ runItButton.addEventListener('click', function() {
         iteration4SAmount = Math.round((beforeTaxIncome * (iteration4Slider.value / 100)) / standardProfit *1) / 1 +1;
         iteration4CAmount = Math.round((beforeTaxIncome * ((100 - iteration4Slider.value) / 100)) / customProfit *1) / 1 +1;
 
-        iteration4Output.innerText = iteration4SAmount + " / " + iteration4CAmount;
+        iteration4Output.innerText = iteration4SAmount + " / " + iteration4CAmount + "/year";
+        iteration4Month.innerText = (Math.round((iteration4SAmount / 12) * 1) / 1 + 1) + " / " + (Math.round((iteration4CAmount / 12) * 1) / 1 + 1) + "/month";
     };
     if (iterationCount >= 5) {
         iteration5OutputDiv.style.display = "block";
@@ -253,7 +276,8 @@ runItButton.addEventListener('click', function() {
         iteration5SAmount = Math.round((beforeTaxIncome * (iteration5Slider.value / 100)) / standardProfit *1) / 1 +1;
         iteration5CAmount = Math.round((beforeTaxIncome * ((100 - iteration5Slider.value) / 100)) / customProfit *1) / 1 +1;
 
-        iteration5Output.innerText = iteration5SAmount + " / " + iteration5CAmount;
+        iteration5Output.innerText = iteration5SAmount + " / " + iteration5CAmount + "/year";
+        iteration5Month.innerText = (Math.round((iteration5SAmount / 12) * 1) / 1 + 1) + " / " + (Math.round((iteration5CAmount / 12) * 1) / 1 + 1) + "/month";
     };
 
     if (standardOnlyCheck === 0) {
